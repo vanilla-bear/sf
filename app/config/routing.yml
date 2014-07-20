@@ -1,0 +1,5 @@
+sf_main:
+    resource: "@sfMainBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
