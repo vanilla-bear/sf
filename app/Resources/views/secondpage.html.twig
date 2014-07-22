@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+    {% block section %}
+      <div id="content-left">
+        {% block contentLeft %}
+            Content left
+        {% endblock %}
+      </div>
+
+      <div id="content-right">
+        {% block contentRight %}
+            Content right
+        {% endblock %}
+      </div>
+    {% endblock %}
