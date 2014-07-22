@@ -6,11 +6,11 @@
 
     <!--
     <parameters>
-        <parameter key="sf_main.example.class">sf\MainBundle\Example</parameter>
+        <parameter key="sf_rando.example.class">sf\RandoBundle\Example</parameter>
     </parameters>
 
     <services>
-        <service id="sf_main.example" class="%sf_main.example.class%">
+        <service id="sf_rando.example" class="%sf_rando.example.class%">
             <argument type="service" id="service_id" />
             <argument>plain_value</argument>
             <argument>%parameter_name%</argument>

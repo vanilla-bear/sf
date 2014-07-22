@@ -1,6 +1,6 @@
 <?php
 
-namespace sf\MainBundle\Tests\Controller;
+namespace sf\RandoBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

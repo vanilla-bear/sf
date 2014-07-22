@@ -1,9 +1,9 @@
 <?php
 
-namespace sf\MainBundle;
+namespace sf\RandoBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class sfMainBundle extends Bundle
+class sfRandoBundle extends Bundle
 {
 }
