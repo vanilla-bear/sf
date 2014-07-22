@@ -4,10 +4,85 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('styles/main.css') }}" type="text/css" media="screen">
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+
+        <header>
+            {% block header %}
+                <div class="title">
+                    <a href="/">
+                        <img class="logo" src="/extension/site_kaliop/design/kaliop/images/logos/logo_KALIOP.png" alt="Kaliop Interactive Media" width="284" height="82">
+                    </a>
+                </div>
+                <nav>
+                    <ul class="menu sf-js-enabled">
+                        <li><a href="#">Home </a></li>
+                        <li><a href="#">About </a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Hotels</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li class="last"><a href="#">Contacts</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </nav>
+            {% endblock %}
+        </header>
+
+        <section id="content">
+            {% block section %}
+            {% endblock %}
+        </section>
+
+        <footer>
+            {% block footer %}
+               <div class="container_12">
+                   <div class="grid_3 fright">
+                     <h4>contacts</h4>
+                     <div class="socials">
+                       <a href="#"><span class="icon"></span>Twitter</a><br>
+                       <a href="#"><span class="icon fb"></span>Facebook</a><br>
+                       <a href="#"><span class="icon rss"></span>RSS</a><br>
+                     </div>
+                   </div>
+                   <div class="grid_3 fright">
+                     <h4>Travel Specialists</h4>
+                      <ul>
+                        <li><a href="#">Groups</a></li>
+                        <li><a href="#">Weddings</a></li>
+                        <li><a href="#">Accessible Travel</a></li>
+                        <li><a href="#">Disney Parks</a></li>
+                        <li><a href="#">Cruises</a></li>
+                        <li><a href="#">Round the World</a></li>
+                        <li><a href="#">First Class Flights</a></li>
+                        <li><a href="#">Business Class Flights</a></li>
+                      </ul>
+                   </div>
+                   <div class="grid_3 fright">
+                     <h4>Vacations</h4>
+                     <ul>
+                       <li><a href="#">Golf Vacations</a></li>
+                       <li><a href="#">Ski &amp; Snowboarding</a></li>
+                       <li><a href="#">Disney Parks Vacations</a></li>
+                       <li><a href="#">Disneyland Vacations</a></li>
+                       <li><a href="#">Disney World Vacations</a></li>
+                       <li><a href="#">Vacations As Advertised</a></li>
+                     </ul>
+                   </div>
+                   <div class="grid_3">
+                     <h4>travel agency</h4>
+                    © 2013 &nbsp;|&nbsp; <a href="index-4.html">Privacy Policy</a> <br>
+                    All Rights Reserved
+                   </div>
+                <div class="clear"></div>
+              </div>
+            {% endblock %}
+        </footer>
+
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -63,3 +63,20 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+# FOSUserBundel Configuration
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: sf\UserBundle\Entity\User
+    registration:
+        form:
+            type: eni_inscription
+        confirmation:
+            enabled: true
+services:
+    sf_user.form.inscription_type:
+        class: sf\UserBundle\Form\InscriptionType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: eni_inscription }
